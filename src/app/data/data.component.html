@@ -1,0 +1,10 @@
+<table border="5" [cellPadding]="3" [cellSpacing]="3" style="border: 1px solid black;">
+    <tr>
+        <th>Parts</th>
+    </tr>
+
+    <tr *ngFor="let item of parts">
+        <td>{{ item | json }}</td>
+    </tr>
+</table>
+

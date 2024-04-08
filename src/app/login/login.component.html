@@ -1,0 +1,28 @@
+<h1 class="h">Login Page</h1>
+<div class="container">
+   
+    <form #login="ngForm" (ngSubmit)="userLogin(login.value)" class="login-form">
+        
+      
+      <div class="input-group">
+        <label>Database</label>
+        <input type="text" name="Database" ngModel>
+      </div>
+
+      <div class="input-group">
+        <label>Username</label>
+        <input type="text" name="username" ngModel>
+      </div>
+
+      <div class="input-group">
+        <label>Password</label>
+        <input type="password" name="password" ngModel>
+      </div>
+      
+      <button type="submit">Login</button>
+    </form>
+  </div>
+  
+  
+  
+
