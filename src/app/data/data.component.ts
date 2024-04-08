@@ -1,31 +1,34 @@
-import { Component } from '@angular/core';
-import { UserService } from '../service/user.service';
-import { HttpClient,HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Router } from '@angular/router'; 
+import { Component, OnInit } from '@angular/core';
 import { PartserviceService } from '../partservice.service';
-
-@Injectable({
-  providedIn: 'root'
-})
-
 
 @Component({
   selector: 'app-data',
   templateUrl: './data.component.html',
-  styleUrl: './data.component.css'
+  styleUrls: ['./data.component.css']
 })
-
-export class DataComponent {
+export class DataComponent implements OnInit {
   parts: any[] = [];
-   constructor(private pservice:PartserviceService){}
-   
-    ngOnInit(){
-      this.pservice.fetch().subscribe((result:any)=>{
-     
-        this.parts = result.value;
-      })
-    }
+
+  constructor(private pservice: PartserviceService) { }
+
+  ngOnInit(): void {
+    this.pservice.fetch().subscribe((result: any) => {
+      this.parts = result.value;
+    });
+  }
+
+  getPropertyNames(arr: any[]): string[] {
+    let propertyNames: string[] = [];
+    arr.forEach(item => {
+      Object.keys(item).forEach(key => {
+        if (!propertyNames.includes(key)) {
+          propertyNames.push(key);
+        }
+      });
+    });
+    return propertyNames;
+  }
 }
+
 
 

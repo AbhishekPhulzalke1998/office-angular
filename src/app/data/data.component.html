@@ -1,10 +1,18 @@
 <table border="5" [cellPadding]="3" [cellSpacing]="3" style="border: 1px solid black;">
-    <tr>
-        <th>Parts</th>
-    </tr>
-
-    <tr *ngFor="let item of parts">
-        <td>{{ item | json }}</td>
-    </tr>
+    <thead>
+        <tr>
+         
+            <th *ngFor="let property of getPropertyNames(parts)">{{ property }}</th>
+        </tr>
+    </thead>
+    <tbody>
+       
+        <tr *ngFor="let item of parts">
+    
+            <td *ngFor="let property of getPropertyNames(parts)" class="">
+                {{ item[property] }}
+            </td>
+        </tr>
+    </tbody>
 </table>
 

@@ -11,8 +11,7 @@ export class UserService {
   
   }
 
-
-  login(data: any){
+    login(data: any){
     const headers = new HttpHeaders({
       'Content-Type': 'application/x-www-form-urlencoded'
     });
