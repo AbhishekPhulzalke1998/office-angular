@@ -9,7 +9,7 @@
        
         <tr *ngFor="let item of parts">
     
-            <td *ngFor="let property of getPropertyNames(parts)" class="">
+            <td *ngFor="let property of getPropertyNames(parts)" class="data">
                 {{ item[property] }}
             </td>
         </tr>

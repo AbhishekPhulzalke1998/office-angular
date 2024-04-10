@@ -6,10 +6,10 @@ import { NewComponent } from './new/new.component';
 // import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
-  {path:'',component:LoginComponent},
+  {path:'',component:LoginComponent}
   // {path:'profile',component:ProfileComponent}
-  {path:'data',component:DataComponent},
-  {path:'new',component:NewComponent}
+  // {path:'data',component:DataComponent},
+  // {path:'new',component:NewComponent}
 ];
 
 @NgModule({

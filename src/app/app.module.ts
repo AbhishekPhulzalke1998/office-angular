@@ -8,7 +8,13 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { DataComponent } from './data/data.component';
+import { PracticeService } from './practice.service';
+import { SelectComponent } from './select/select.component';
+import { ExpandComponent } from './expand/expand.component';
+
 import { NewComponent } from './new/new.component';
+import { ExpselcomComponent } from './expselcom/expselcom.component';
+import { RelationshipcomponentComponent } from './relationshipcomponent/relationshipcomponent.component';
 
 
 @NgModule({
@@ -17,6 +23,11 @@ import { NewComponent } from './new/new.component';
     LoginComponent,
     DataComponent,
     NewComponent,
+    SelectComponent,
+    ExpandComponent,
+
+    ExpselcomComponent,
+      RelationshipcomponentComponent
     // ProfileComponent
   ],
   imports: [

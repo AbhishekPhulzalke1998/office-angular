@@ -19,6 +19,7 @@ export class NewComponent implements OnInit {
   partCount: number = 0;
   filterCount:any;
 
+
   constructor(private practice:PracticeService) 
   {
 
@@ -41,6 +42,8 @@ export class NewComponent implements OnInit {
       console.error('Error occurred while fetching filter parts:', error);
     }
     );
+
+
 
   }
 
