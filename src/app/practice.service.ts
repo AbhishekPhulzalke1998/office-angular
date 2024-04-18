@@ -20,7 +20,7 @@ export class PracticeService {
     {
       const headers = new HttpHeaders()
       .set("Authorization",`bearer ${localStorage.getItem('token')}`);
-      return this.http.get("http://localhost/InnovatorServer22/server/odata/Part('B0FF8DAF59C8455B996C1E99ACDFE36B')/item_number/$value",{headers});
+      return this.http.get("http://localhost/InnovatorServer22/server/odata/Part('BDE35011844C499A8BA0AAB21710EFD2')/item_number/$value",{headers});
 
     }
 

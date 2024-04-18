@@ -1,0 +1,16 @@
+/* Reduce button height */
+.mat-raised-button {
+    height: 36px;
+  }
+  
+  /* Reduce button padding */
+  .mat-raised-button .mat-button-wrapper {
+    padding: 6px 12px; /* Adjust padding as needed */
+  }
+  
+  /* Reduce button font size */
+  .mat-raised-button .mat-button-wrapper {
+    font-size: 14px; /* Adjust font size as needed */
+  }
+  
+

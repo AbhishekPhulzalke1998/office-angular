@@ -14,6 +14,6 @@ expsel()
 {
  const headers = new HttpHeaders()
  .set("Authorization",`bearer ${localStorage.getItem('token')}`);
- return this.http.get("http://localhost/InnovatorServer22/server/odata/Part('118AECF7C79349EF9C4C8759A3DA4EDD')/Part CAD",{headers});
+ return this.http.get("http://localhost/InnovatorServer22/server/odata/Part('BDE35011844C499A8BA0AAB21710EFD2')/Part CAD",{headers});
 }
 }

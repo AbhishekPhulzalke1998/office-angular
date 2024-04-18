@@ -1,0 +1,11 @@
+<mat-dialog-content>
+    <mat-form-field>
+      <input matInput placeholder="Enter ID" [(ngModel)]="Id">
+    </mat-form-field>
+
+      
+    <mat-dialog-actions align="end">
+        <button mat-raised-button color="primary" (click)="DeletePart()">Delete</button>
+        <button mat-raised-button color="warn" (click)="cancel()">Cancel</button>
+      </mat-dialog-actions>
+

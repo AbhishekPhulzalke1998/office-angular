@@ -17,7 +17,7 @@ export class SelectComponent implements OnInit {
                     this.select.selectparts().subscribe((result:any) =>{
                       console.log("select parts ",result);
                       this.selpart = result;
-                      // this.created_by_id = result.created_by_id;
+                  
                       });
                     }
                   }

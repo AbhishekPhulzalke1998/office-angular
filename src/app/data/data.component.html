@@ -5,8 +5,9 @@
             <th *ngFor="let property of getPropertyNames(parts)">{{ property }}</th>
         </tr>
     </thead>
+    
     <tbody>
-       
+
         <tr *ngFor="let item of parts">
     
             <td *ngFor="let property of getPropertyNames(parts)" class="data">
@@ -14,5 +15,14 @@
             </td>
         </tr>
     </tbody>
-</table>
+</table><br>
 
+
+<mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="openDialog()">Add Part</button>
+</mat-dialog-actions>
+
+
+<mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="openDialog1()">Delete Part</button>
+</mat-dialog-actions>
