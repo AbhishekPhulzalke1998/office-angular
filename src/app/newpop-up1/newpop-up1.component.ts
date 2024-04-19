@@ -2,6 +2,8 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { NewupdateService } from '../newupdate.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { GetserviceService } from '../getservice.service';
+ 
 
 @Component({
   selector: 'app-newpop-up1',
@@ -18,15 +20,33 @@ export class NewpopUp1Component implements OnInit {
     private dialogRef: MatDialogRef<NewpopUp1Component>,
     private newupdateservice: NewupdateService,
     private snackBar: MatSnackBar,
+    private getService:GetserviceService,
     @Inject(MAT_DIALOG_DATA) public data: { partId: string }
   ) {}
 
   ngOnInit(): void {
     if (this.data && this.data.partId) {
       this.partId = this.data.partId;
+      this.fetchPartData();
     }
   }
 
+  fetchPartData(): void {
+    if (this.partId) {
+      this.getService.getmethod(this.partId).subscribe(
+        (response: any) => {
+         this.itemNumber = response.item_number;
+          this.name = response.name;
+          this.description = response.description;
+        },
+        (error: any) => {
+          console.error('Error fetching part data:', error);
+        
+        }
+      );
+    }
+  }
+  
   UpdatePart(): void {
     const partData = {
       partId: this.partId,

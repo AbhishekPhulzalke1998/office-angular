@@ -28,7 +28,7 @@ import { NewupdateComponent } from './newupdate/newupdate.component';
 import { NewpopUpComponent } from './newpop-up/newpop-up.component';
 import { NewpopUp1Component } from './newpop-up1/newpop-up1.component';
 import { DeleteComponent } from './delete/delete.component';
-
+import { GetserviceService } from './getservice.service';
 
 
 @NgModule({
@@ -49,7 +49,8 @@ import { DeleteComponent } from './delete/delete.component';
     NewupdateComponent,
     NewpopUpComponent,
     NewpopUp1Component,
-    DeleteComponent
+    DeleteComponent,
+    
      
 
 
@@ -77,7 +78,8 @@ import { DeleteComponent } from './delete/delete.component';
     {
       provide: MatDialogRef,
       useValue: {}
-    }
+    },
+    GetserviceService
   ],
   bootstrap: [AppComponent]
 })

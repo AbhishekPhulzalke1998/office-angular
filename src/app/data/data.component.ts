@@ -22,19 +22,19 @@ cancel() {
 throw new Error('Method not implemented.');
 }
   parts: any[] = [];
-  // partId: any;
+
 
   partId:string = '';
   itemNumber: string = '';
   name: string = '';
   description: string = '';
 
-  constructor(private pservice: PartserviceService,
-              private delservice:DeleteService,
+  constructor( private pservice: PartserviceService,
+               private delservice:DeleteService,
                private dialog: MatDialog,
                private dialogRef: MatDialogRef<NewpopUp1Component>,
-    private newupdateservice: NewupdateService,
-    private snackBar: MatSnackBar,
+               private newupdateservice: NewupdateService,
+               private snackBar: MatSnackBar,
 
   ) { }
 
@@ -107,7 +107,5 @@ throw new Error('Method not implemented.');
      
     });
   }
-
-
 
 }
