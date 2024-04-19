@@ -9,17 +9,17 @@ import { NewpopUpComponent } from '../newpop-up/newpop-up.component';
 })
 export class NewupdateComponent {
 
-  constructor(private dialog: MatDialog) { }
+  // constructor(private dialog: MatDialog) { }
 
-  openDialog1(): void {
-    const dialogRef = this.dialog.open(NewpopUpComponent, {
-      width: '400px'
-    });
+  // openDialog2(): void {
+  //   const dialogRef = this.dialog.open(NewpopUpComponent, {
+  //     width: '400px'
+  //   });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+  //   dialogRef.afterClosed().subscribe(result => {
+  //     console.log('The dialog was closed');
      
-    });
-  }
+  //   });
+  // }
 }
 

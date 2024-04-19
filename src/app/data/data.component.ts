@@ -1,9 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { PartserviceService } from '../partservice.service';
 import { DialogComponent } from '../dailog/dailog.component';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { DeleteComponent } from '../delete/delete.component';
 import { DeleteService } from '../delete.service';
+import { NewpopUpComponent } from '../newpop-up/newpop-up.component';
+import { NewpopUp1Component } from '../newpop-up1/newpop-up1.component';
+import { PopUpComponent } from '../pop-up/pop-up.component';
+import { NewupdateService } from '../newupdate.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -12,11 +17,25 @@ import { DeleteService } from '../delete.service';
   styleUrls: ['./data.component.css']
 })
 export class DataComponent implements OnInit {
+  data: any;
+cancel() {
+throw new Error('Method not implemented.');
+}
   parts: any[] = [];
+  // partId: any;
+
+  partId:string = '';
+  itemNumber: string = '';
+  name: string = '';
+  description: string = '';
 
   constructor(private pservice: PartserviceService,
               private delservice:DeleteService,
-               private dialog: MatDialog
+               private dialog: MatDialog,
+               private dialogRef: MatDialogRef<NewpopUp1Component>,
+    private newupdateservice: NewupdateService,
+    private snackBar: MatSnackBar,
+
   ) { }
 
  
@@ -74,6 +93,21 @@ export class DataComponent implements OnInit {
         });
        
      });
-  
-   }
+  }
+
+  openDialog2(): void {
+    const dialogRef = this.dialog.open(NewpopUp1Component, {
+      width: '400px'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      this.pservice.fetch().subscribe((result: any) => {
+        this.parts = result.value;
+      });
+     
+    });
+  }
+
+
+
 }

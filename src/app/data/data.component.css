@@ -9,3 +9,14 @@
     border-spacing: 0 15px; 
   
 }
+
+.divs{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+  
+}
+
+.divs button {
+    margin-left: 10px; /* Adjust space size */
+}

@@ -29,9 +29,7 @@ export class DeleteComponent {
 
     DeletePart(): void {
         
-      
-
-      this.deleteservice.deletemethod(this.Id).subscribe(
+        this.deleteservice.deletemethod(this.Id).subscribe(
         response => {
           console.log('Part deleted successfully:', response);
           this.dialogRef.close();

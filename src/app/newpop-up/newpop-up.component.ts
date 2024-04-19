@@ -9,23 +9,23 @@ import { NewpopUp1Component } from '../newpop-up1/newpop-up1.component';
 })
 export class NewpopUpComponent {
 
-  partId:string = '';
+  // partId:string = '';
 
-  constructor(private dialog: MatDialog, public dialogRef: MatDialogRef<NewpopUpComponent>) { }
+  // constructor(private dialog: MatDialog, public dialogRef: MatDialogRef<NewpopUpComponent>) { }
 
-  openSecondDialog(): void {
-    const dialogRef = this.dialog.open(NewpopUp1Component, {
-      width: '400px',
-      data: { partId: this.partId }
-    });
+  // openSecondDialog(): void {
+  //   const dialogRef = this.dialog.open(NewpopUp1Component, {
+  //     width: '400px',
+  //     data: { partId: this.partId }
+  //   });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The second dialog was closed');
+  //   dialogRef.afterClosed().subscribe(result => {
+  //     console.log('The second dialog was closed');
    
-    });
-  }
+  //   });
+  // }
 
-  cancel(): void {
-    this.dialogRef.close(); 
-  }
+  // cancel(): void {
+  //   this.dialogRef.close(); 
+  // }
 }
