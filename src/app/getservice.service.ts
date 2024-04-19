@@ -21,6 +21,7 @@ export class GetserviceService {
     const url = `${this.baseUrl}('${id}')?$select=item_number,description,name`;
    console.log(url);
     return this.http.get(url, { headers });
+    
   }
   
 }  
